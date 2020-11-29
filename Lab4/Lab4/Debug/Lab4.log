@@ -1,0 +1,21 @@
+﻿  PersonSBTree.cpp
+C:\Users\Acer\Desktop\Учеба\Ппп второй курс\Лаб4\Example\PersonSBTree.cpp(30,14): error C2039: "getIdP": не является членом "Person".
+C:\Users\Acer\Desktop\Учеба\Ппп второй курс\Лаб4\Example\Person.h(10): message : см. объявление "Person"
+C:\Users\Acer\Desktop\Учеба\Ппп второй курс\Лаб4\Example\PersonSBTree.cpp(30,38): error C2039: "getIdP": не является членом "Person".
+C:\Users\Acer\Desktop\Учеба\Ппп второй курс\Лаб4\Example\Person.h(10): message : см. объявление "Person"
+C:\Users\Acer\Desktop\Учеба\Ппп второй курс\Лаб4\Example\PersonSBTree.cpp(33,15): error C2039: "getIdP": не является членом "Person".
+C:\Users\Acer\Desktop\Учеба\Ппп второй курс\Лаб4\Example\Person.h(10): message : см. объявление "Person"
+C:\Users\Acer\Desktop\Учеба\Ппп второй курс\Лаб4\Example\PersonSBTree.cpp(33,39): error C2039: "getIdP": не является членом "Person".
+C:\Users\Acer\Desktop\Учеба\Ппп второй курс\Лаб4\Example\Person.h(10): message : см. объявление "Person"
+C:\Users\Acer\Desktop\Учеба\Ппп второй курс\Лаб4\Example\PersonSBTree.cpp(49,20): error C2039: "getIdP": не является членом "Person".
+C:\Users\Acer\Desktop\Учеба\Ппп второй курс\Лаб4\Example\Person.h(10): message : см. объявление "Person"
+C:\Users\Acer\Desktop\Учеба\Ппп второй курс\Лаб4\Example\PersonSBTree.cpp(55,30): error C2039: "getIdP": не является членом "Person".
+C:\Users\Acer\Desktop\Учеба\Ппп второй курс\Лаб4\Example\Person.h(10): message : см. объявление "Person"
+C:\Users\Acer\Desktop\Учеба\Ппп второй курс\Лаб4\Example\PersonSBTree.cpp(89,30): error C2039: "getIdP": не является членом "Person".
+C:\Users\Acer\Desktop\Учеба\Ппп второй курс\Лаб4\Example\Person.h(10): message : см. объявление "Person"
+C:\Users\Acer\Desktop\Учеба\Ппп второй курс\Лаб4\Example\PersonSBTree.cpp(92,31): error C2039: "getIdP": не является членом "Person".
+C:\Users\Acer\Desktop\Учеба\Ппп второй курс\Лаб4\Example\Person.h(10): message : см. объявление "Person"
+  Main.cpp
+C:\Users\Acer\Desktop\Учеба\Ппп второй курс\Лаб4\Lab4\Lab4\Main.cpp(29,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+  Person.cpp
+  Создание кода...
