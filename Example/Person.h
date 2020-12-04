@@ -10,19 +10,19 @@ using namespace std;
 class Person
 {
 private:
-	string surName;
-	string name;
-	int inn;
+	int idP;
+	int id;
+	string month;
 	string phone;
 public:
-	Person(string surName, string name, int inn, string phone);
+	Person(int idP, int id, string month,  string phone);
 	Person(Person & person);
 	Person();
 	~Person();
 
-	string getSurName();
-	string getName();
-	int getInn();
+	int getIdP();
+	int getId();
+	string getMonth();
 	string getPhone();
 
 	friend ostream & operator<<(ostream & cout, Person & person);

@@ -1,26 +1,26 @@
 #include "Person.h"
 
-Person::Person(string surName, string name, int inn, string phone)
+Person::Person(int idP, int id, string month, string phone)
 {
-	this->surName = surName;
-	this->name = name;
-	this->inn = inn;
+	this->idP = idP;
+	this->id = id;
+	this->month = month;
 	this->phone = phone;
 }
 
 Person::Person(Person & person)
 {
-	this->surName = person.surName;
-	this->name = person.name;
-	this->inn = person.inn;
+	this->idP = person.idP;
+	this->id = person.id;
+	this->month = person.month;
 	this->phone = person.phone;
 }
 
 Person::Person()
 {
-	this->surName ="";
-	this->name = "";
-	this->inn = 0;
+	this->idP = 0;
+	this->id = 0;
+	this->month = "";
 	this->phone = "";
 }
 
@@ -28,19 +28,19 @@ Person::~Person()
 {
 }
 
-string Person::getSurName()
+int Person::getId()
 {
-	return surName;
+	return id;
 }
 
-string Person::getName()
+string Person::getMonth()
 {
-	return name;
+	return month;
 }
 
-int Person::getInn()
+int Person::getIdP()
 {
-	return inn;
+	return idP;
 }
 
 string Person::getPhone()
@@ -50,9 +50,10 @@ string Person::getPhone()
 
 ostream & operator<<(ostream & cout, Person & person)
 {
-	return cout << setw(12) << person.surName
-		<< setw(12) << person.name
-		<< setw(10) << person.inn
+	return cout 
+		<< setw(10) << person.idP
+		<< setw(12) << person.id
+		<< setw(12) << person.month
 		<< setw(10) << person.phone;
 }
 

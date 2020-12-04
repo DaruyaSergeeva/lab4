@@ -27,39 +27,85 @@ bool PersonSBTree::insertPerson(PersonNode * &root, Person & person)
 	}
 	else
 	{
-		if (person.getInn() < root->person.getInn()) 
+		if (person.getIdP() < root->person.getIdP()) 
 			return insertPerson(root->left, person);
 		else
-			if (person.getInn() > root->person.getInn())
+			if (person.getIdP() > root->person.getIdP())
 				return insertPerson(root->right, person);
 			else
 				return false;
 	}	
 }
 
-bool PersonSBTree::search(int keyInn, Person & person)
+
+bool PersonSBTree::search(int keyIdP, Person & person)
 {
-	return searchPerson(root, keyInn, person);
+	return searchPerson(root, keyIdP, person);
 }
 
-bool PersonSBTree::searchPerson(PersonNode * & root, int keyInn, Person & person)
+bool PersonSBTree::searchPerson(PersonNode * & root, int keyIdP, Person & person)
 {
 	if (root != nullptr)
 	{
-		if (root->person.getInn() == keyInn)
+		if (root->person.getIdP() == keyIdP)
 		{
 			person = root->person;
 			return true;
 		}
 		else
-			if (keyInn < root->person.getInn())
-				return searchPerson(root->left, keyInn, person);
+			if (keyIdP < root->person.getIdP())
+				return searchPerson(root->left, keyIdP, person);
 			else
-				return searchPerson(root->right, keyInn, person);
+				return searchPerson(root->right, keyIdP, person);
 	}
 	else
 		return false;
 }
+bool PersonSBTree::search1(int keyId, Person& person)
+{
+	return searchPerson1(root, keyId, person);
+}
+
+bool PersonSBTree::searchPerson1(PersonNode*& root, int keyId, Person& person)
+{
+	if (root != nullptr)
+	{
+		if (root->person.getId() == keyId)
+		{
+			person = root->person;
+			
+			return true;
+		}
+		else
+			if (keyId < root->person.getId())
+				return searchPerson1(root->left, keyId, person);
+			else
+				return searchPerson1(root->right, keyId, person);
+	}
+		return false;
+}
+bool PersonSBTree::insert1(Person& person)
+{
+	return insertPerson1(root, person);
+}
+bool PersonSBTree::insertPerson1(PersonNode*& root, Person& person)
+{
+	if (root == nullptr)
+	{
+		root = new PersonNode(person, nullptr, nullptr);
+		return true;
+	}
+	else
+	{
+		if (person.getId() < root->person.getId())
+			return insertPerson1(root->left, person);
+		else
+			if (person.getId() > root->person.getId())
+				return insertPerson1(root->right, person);
+			
+	}
+}
+
 
 
 
@@ -71,12 +117,12 @@ ostream & operator<<(ostream & cout, PersonSBTree & personSBTree)
 	
 }
 
-bool PersonSBTree::erase(int keyInn)
+bool PersonSBTree::erase(int keyIdP)
 {
-	return erasePerson(root, keyInn);
+	return erasePerson(root, keyIdP);
 }
 
-bool PersonSBTree::erasePerson(PersonNode *& root, int keyInn)
+bool PersonSBTree::erasePerson(PersonNode *& root, int keyIdP)
 {
 	//void DeleteNode(TreeNode * &p, int k)
 	{
@@ -86,11 +132,11 @@ bool PersonSBTree::erasePerson(PersonNode *& root, int keyInn)
 			return false;
 		else
 		{
-			if (keyInn < root->person.getInn())
-				return erasePerson(root->left, keyInn);
+			if (keyIdP < root->person.getIdP())
+				return erasePerson(root->left, keyIdP);
 			else
-				if (keyInn > root->person.getInn())
-					return erasePerson(root->right, keyInn);
+				if (keyIdP > root->person.getIdP())
+					return erasePerson(root->right, keyIdP);
 				else
 				{
 					delnode = root;
