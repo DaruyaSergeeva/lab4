@@ -74,7 +74,7 @@ int main()
 
 
 	// ------ Удаление объекта из базы данных по ключу
-	key = 2; // 1500
+	/*key = 2; // 1500
 	if (dataBase.erase(key)) {
 		cout << "Персона с IdP = " << key << " удалена:" << endl;		
 		cout << "Бухгалтерия 1Ц:" << endl;
@@ -83,7 +83,7 @@ int main()
 	else
 		cout << "Удаляемая персона с IdP = " << key << " не обнаружена." << endl;
 	cout << endl;
-	
+	*/
 	dataBase.clear();
 	dataBase1.clear();
 	system("pause");

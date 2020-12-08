@@ -77,7 +77,7 @@ bool PersonSBTree::searchPerson1(PersonNode*& root, int keyId, Person& person)
 			return true;
 		}
 		else
-			if (keyId < root->person.getId())
+			if (keyId = root->person.getId())
 				return searchPerson1(root->left, keyId, person);
 			else
 				return searchPerson1(root->right, keyId, person);
@@ -90,20 +90,23 @@ bool PersonSBTree::insert1(Person& person)
 }
 bool PersonSBTree::insertPerson1(PersonNode*& root, Person& person)
 {
-	if (root == nullptr)
+	while (root == nullptr)
 	{
 		root = new PersonNode(person, nullptr, nullptr);
 		return true;
 	}
-	else
+	//else
 	{
 		if (person.getId() < root->person.getId())
 			return insertPerson1(root->left, person);
 		else
 			if (person.getId() > root->person.getId())
 				return insertPerson1(root->right, person);
+			else
+				return false;
 			
 	}
+	
 }
 
 
